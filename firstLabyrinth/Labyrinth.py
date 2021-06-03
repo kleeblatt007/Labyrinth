@@ -1,6 +1,5 @@
 import random
 
-
 class Position(object):
     """Position mit x und y Wert"""
 
@@ -53,6 +52,9 @@ class Labyrinth(object):
                 s += str(self.__lab[x][y]) + " "
             s += "\n"
         return s
+
+    def getLab(self):
+        return self.__lab
 
     def path(self):
         """erstellt ein random Pfad"""
