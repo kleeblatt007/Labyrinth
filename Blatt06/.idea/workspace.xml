@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed8a8fbe-530f-4c51-8429-a9037eb8d40a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Blatt00/src/Aufgabe0.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt00/src/Aufgabe0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blatt01/src/CorticalNeuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt01/src/CorticalNeuron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blatt01/src/Interneuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt01/src/Interneuron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blatt01/src/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt01/src/Network.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blatt01/src/Photoreceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt01/src/Photoreceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blatt01/src/Synapse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt01/src/Synapse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blatt05/src/Genomics.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt05/src/Genomics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blatt05/src/RowOfBowls.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Blatt05/src/RowOfBowls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DepthFirstPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DepthFirstPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DepthFirstPathsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DepthFirstPathsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RandomDepthFirstPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomDepthFirstPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RandomDepthFirstPathsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomDepthFirstPathsTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1tjD0LmlXvbW98AMAMFjrCLKIcB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.RandomDepthFirstPathsTest">
+    <configuration name="Maze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Maze" />
+      <module name="Blatt06" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepthFirstPathsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Blatt06" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DepthFirstPathsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MazeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Blatt06" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MazeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MazeTest.testFindWay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Blatt06" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MazeTest" />
+      <option name="METHOD_NAME" value="testFindWay" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RandomDepthFirstPathsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Blatt06" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RandomDepthFirstPathsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RandomDepthFirstPathsTest" />
+        <item itemvalue="JUnit.MazeTest" />
+        <item itemvalue="Application.Maze" />
+        <item itemvalue="JUnit.DepthFirstPathsTest" />
+        <item itemvalue="JUnit.MazeTest.testFindWay" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed8a8fbe-530f-4c51-8429-a9037eb8d40a" name="Default Changelist" comment="" />
+      <created>1623273381058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623273381058</updated>
+      <workItem from="1623273382446" duration="5738000" />
+      <workItem from="1623315294382" duration="28248000" />
+      <workItem from="1623571267989" duration="2002000" />
+      <workItem from="1623573292084" duration="3004000" />
+      <workItem from="1623849034713" duration="183000" />
+      <workItem from="1623933171651" duration="2133000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Maze.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DepthFirstPaths.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MazeTest.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
