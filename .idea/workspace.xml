@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a124977-59e3-4b85-93ad-6cdf5ff777eb" name="Default Changelist" comment="labyrinth as graph">
-      <change afterPath="$PROJECT_DIR$/.idea/Labyrinth.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DepthFirstPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/DepthFirstPath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Labyrinth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomPath.py" afterDir="false" />
-    </list>
+    <list default="true" id="2a124977-59e3-4b85-93ad-6cdf5ff777eb" name="Default Changelist" comment="fixed import" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +95,7 @@
       <workItem from="1623329047058" duration="6595000" />
       <workItem from="1623932963176" duration="3500000" />
       <workItem from="1625072737216" duration="327000" />
-      <workItem from="1625073076098" duration="337000" />
+      <workItem from="1625073076098" duration="1072000" />
     </task>
     <task id="LOCAL-00001" summary="labyrinth as graph">
       <created>1623344894239</created>
@@ -115,7 +104,35 @@
       <option name="project" value="LOCAL" />
       <updated>1623344894239</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed import">
+      <created>1625073429861</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625073429861</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed import">
+      <created>1625073483243</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625073483243</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed import">
+      <created>1625073519215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625073519215</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed import">
+      <created>1625074073542</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625074073542</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +152,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="labyrinth as graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="labyrinth as graph" />
+    <MESSAGE value="fixed import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
