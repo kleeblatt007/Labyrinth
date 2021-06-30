@@ -1,4 +1,3 @@
-import Graph
 import random
 
 class RandomPath(object):

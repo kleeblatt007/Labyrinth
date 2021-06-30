@@ -1,5 +1,3 @@
-import Graph
-
 class DepthFirstPath(object):
 
     def __init__(self, G, start):

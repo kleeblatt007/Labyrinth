@@ -1,12 +1,12 @@
-import Graph
-import RandomPath
-import DepthFirstPath
-import Coordinate
+from Graph import Graph
+from RandomPath import RandomPath
+from DepthFirstPath import DepthFirstPath
+from Coordinate import Coordinate
 import math
 import matplotlib.pyplot as plt
 
 
-class Lab(object):
+class Labyrinth(object):
     def __init__(self, N, start):
         self.N = N
         self.graph = Graph(pow(N, 2))

@@ -1,6 +1,5 @@
-import math
+from Labyrinth import *
 
-print(math.ceil(2.04))
-
-#lab = Lab(2, 0)
+lab = Labyrinth(3, 0)
+print(lab)
 
