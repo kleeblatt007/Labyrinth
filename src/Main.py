@@ -1,6 +1,6 @@
 from Labyrinth import *
 
-lab = Labyrinth(47, 0)
+lab = Labyrinth(40, 0)
 lab.printLab()
 #lab.printLab()
 
