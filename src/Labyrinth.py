@@ -59,7 +59,6 @@ class Labyrinth(object):
                         m.addEdge(s, s + self.N)
                         m.addEdge(s, s - self.N)
                 s += 1
-        #m.printGraph()
         return m
 
     def build(self):

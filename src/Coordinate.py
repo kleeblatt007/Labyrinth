@@ -1,4 +1,7 @@
 class Coordinate(object):
+    '''
+    speichert X- und Y-Wert
+    '''
     def __init__(self, x, y):
         self.x = x
         self.y = y

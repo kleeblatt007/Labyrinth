@@ -73,8 +73,6 @@ class Graph(object):
         return c
 
     def printGraph(self):
-        # x = 0
-        # y = self.N-1
         for n in range(self.nodes):
             # xArray = []
             # yArray = []

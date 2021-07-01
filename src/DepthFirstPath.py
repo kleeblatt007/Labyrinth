@@ -7,9 +7,6 @@ class DepthFirstPath(object):
             self.marked[i] = False
         self.edgeTo = [G.nodes]
         self.distTo = [G.nodes]
-        #self.preoreder = []
-        #self.postorder = []
-
 
     def path(self, G):
         self.path(G, self.start)

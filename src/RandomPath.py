@@ -5,7 +5,6 @@ class RandomPath(object):
     '''
     Erstellt mit Hilfe der Tiefensuche ein random Pfad
     '''
-
     def __init__(self, start, G):
         self.marked = []
         self.edgeTo = [0 for x in range(G.getNodes())]
