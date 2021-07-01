@@ -2,7 +2,6 @@ from Graph import Graph
 from RandomPath import RandomPath
 from DepthFirstPath import DepthFirstPath
 from Coordinate import Coordinate
-import math
 import matplotlib.pyplot as plt
 
 
@@ -46,12 +45,21 @@ class Labyrinth(object):
                         m.addEdge(s, s - 1)
                         m.addEdge(s, s - self.N)
                 else:
-                    m.addEdge(s, s + 1)
-                    m.addEdge(s, s - 1)
-                    m.addEdge(s, s + self.N)
-                    m.addEdge(s, s - self.N)
+                    if x == 0:
+                        m.addEdge(s, s + 1)
+                        m.addEdge(s, s + self.N)
+                        m.addEdge(s, s - self.N)
+                    elif x == self.N-1:
+                        m.addEdge(s, s - 1)
+                        m.addEdge(s, s + self.N)
+                        m.addEdge(s, s - self.N)
+                    else:
+                        m.addEdge(s, s + 1)
+                        m.addEdge(s, s - 1)
+                        m.addEdge(s, s + self.N)
+                        m.addEdge(s, s - self.N)
                 s += 1
-
+        #m.printGraph()
         return m
 
     def build(self):
@@ -102,15 +110,15 @@ class Labyrinth(object):
         :return: Coordinate
         '''
         if n == 0:
-            c = Coordinate(0, 0)
+            c = Coordinate(0, self.N-1)
             return c
 
-        x = int(math.ceil(n / self.N) - 1)
-        y = int(self.N / int(n / self.N))
+        x = n % self.N
+        y = self.N-1-int(n/self.N)
         c = Coordinate(x, y)
         return c
 
-    def __str__(self):
+    def printLab(self):
         # x = 0
         # y = self.N-1
         for n in range(self.graph.getNodes()):
@@ -121,7 +129,12 @@ class Labyrinth(object):
             for v in self.graph.getAdj(n):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
-                plt.plot({c1.X, c2.X}, {c1.Y, c2.Y})
+                #plt.plot(c1.x,c1.y,'o')
+                x = [c1.x, c2.x]
+                y = [c1.y, c2.y]
+                plt.plot(x,y)
+
+        plt.show()
 
         # x += 1
         # if x == self.N:
