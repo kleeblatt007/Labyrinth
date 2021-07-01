@@ -1,8 +1,8 @@
 class Graph(object):
     def __init__(self, nodes):
-        self.nodes = nodes
+        self.nodes = int(nodes)
         self.edges = 0
-        self.adj = []
+        self.adj = [[]for x in range(nodes)]
 
     def validNode(self, n):
         '''
@@ -10,9 +10,13 @@ class Graph(object):
         :param n: int
         :return: boolean
         '''
-        for i in n:
-            if i < 0 or i > self.nodes:
+        if n.__class__ == int:
+            if n < 0 or n > self.nodes:
                 return False
+        else:
+            for x in n:
+                if x < 0 or x > self.nodes:
+                    return False
         return True
 
     def addEdge(self, n, w):
@@ -24,24 +28,25 @@ class Graph(object):
         :return:
         '''
         if self.validNode([n,w]):
-            if self.adj(n).__contains(w):
-                return
+            #if self.adj[n].__contains__(w):
+                #return
             self.edges += 1
             self.adj[n].append(w)
             self.adj[w].append(n)
 
-    def adj(self, n):
+    def getAdj(self, n):
         '''
         gibt adjazierende Knoten für Knoten n zurück
         :param n: int
-        :return:
+        :return: list
         '''
         if self.validNode(n):
             return self.adj[n]
         return None
 
     def getNodes(self):
-        return self.nodes
+         x = self.nodes
+         return x
 
     def getEdges(self):
         return self.edges

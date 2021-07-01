@@ -61,8 +61,8 @@ class Labyrinth(object):
         '''
         if self.graph.getNodes() <= 2:
             return
-        G = RandomPath(self.graph, self.start)
-        G.path(self.grid())
+        G = RandomPath(self.start, self.graph)
+        G.path(self.grid(), self.start)
         a = G.getEdgeTo()
         for i in range(len(a)):
             if i == self.start:
@@ -118,7 +118,7 @@ class Labyrinth(object):
             # yArray = []
             # xArray.append(x)
             # yArray.append(y)
-            for v in self.graph.adj(n):
+            for v in self.graph.getAdj(n):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
                 plt.plot({c1.X, c2.X}, {c1.Y, c2.Y})
