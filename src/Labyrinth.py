@@ -3,6 +3,8 @@ from RandomPath import RandomPath
 from DepthFirstPath import DepthFirstPath
 from Coordinate import Coordinate
 import matplotlib.pyplot as plt
+#from pprint import pprint
+#import numpy as np
 
 
 class Labyrinth(object):
@@ -135,7 +137,30 @@ class Labyrinth(object):
 
         plt.show()
 
-        # x += 1
-        # if x == self.N:
-        #     y -= 1
-        #     x = 0
+    def labToTxt(self):
+        a = [[0 for i in range(self.N*2-1)]for x in range(self.N*2-1)]
+        #c = self.nodeToCoordinate(self.start)
+        #a[c.X()][c.Y()] = 1
+        y = 0
+        for n in range(self.graph.getNodes()):
+            c = self.nodeToCoordinate(n)
+            x = c.X()*2
+            a[y][x] = 1
+            for v in self.graph.getAdj(n):
+                i = v - n
+                if i == 1:
+                    a[y][x + 1] = 1
+                elif i == -1:
+                    a[y][x - 1] = 1
+                elif i > 0:
+                    a[y + 1][x] = 1
+                else:
+                    a[y - 1][x] = 1
+            if c.X() == self.N - 1:
+                y += 2
+        #pprint(a)
+        #b = np.array(a)
+        #np.savetxt('Lab.txt', b)
+        with open('Lab.txt', 'w') as file:
+            for row in a:
+                file.write(' '.join([str(c) for c in row]) + '\n')
