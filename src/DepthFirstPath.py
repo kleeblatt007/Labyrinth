@@ -2,11 +2,11 @@ class DepthFirstPath(object):
 
     def __init__(self, G, start):
         self.start = start
-        self.marked = [G.nodes]
-        for i in range(G.nodes):
+        self.marked = [G.getNodes()]
+        for i in range(G.getNodes()):
             self.marked[i] = False
-        self.edgeTo = [G.nodes]
-        self.distTo = [G.nodes]
+        self.edgeTo = [G.getNodes()]
+        self.distTo = [G.getNodes()]
 
     def path(self, G):
         self.path(G, self.start)
