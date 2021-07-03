@@ -85,6 +85,5 @@ class Graph(object):
                 x = [c1.x, c2.x]
                 y = [c1.y, c2.y]
                 plt.plot(x,y)
-                #plt.show()
 
         plt.show()

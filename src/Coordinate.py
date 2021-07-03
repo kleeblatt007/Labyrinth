@@ -19,4 +19,3 @@ class Coordinate(object):
         :return: int
         '''
         return self.y
-

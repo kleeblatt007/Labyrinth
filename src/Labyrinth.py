@@ -139,8 +139,6 @@ class Labyrinth(object):
 
     def labToTxt(self):
         a = [[0 for i in range(self.N*2-1)]for x in range(self.N*2-1)]
-        #c = self.nodeToCoordinate(self.start)
-        #a[c.X()][c.Y()] = 1
         y = 0
         for n in range(self.graph.getNodes()):
             c = self.nodeToCoordinate(n)
