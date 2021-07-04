@@ -21,7 +21,7 @@ class Labyrinth(object):
         :return: Graph
         '''
         m = Graph(pow(self.N, 2))
-        s = self.start
+        s = 0
         for y in range(self.N):
             for x in range(self.N):
                 if y == 0:
