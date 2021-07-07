@@ -3,8 +3,10 @@ from RandomPath import RandomPath
 from DepthFirstPath import DepthFirstPath
 from Coordinate import Coordinate
 import matplotlib.pyplot as plt
-#from pprint import pprint
-#import numpy as np
+
+
+# from pprint import pprint
+# import numpy as np
 
 
 class Labyrinth(object):
@@ -51,7 +53,7 @@ class Labyrinth(object):
                         m.addEdge(s, s + 1)
                         m.addEdge(s, s + self.N)
                         m.addEdge(s, s - self.N)
-                    elif x == self.N-1:
+                    elif x == self.N - 1:
                         m.addEdge(s, s - 1)
                         m.addEdge(s, s + self.N)
                         m.addEdge(s, s - self.N)
@@ -91,6 +93,17 @@ class Labyrinth(object):
                     return True
         return False
 
+    def printPath(self, path,e):
+        edges = path.pathTo(e)
+        for x in range(len(edges)-1,1,-1):
+            c1 = self.nodeToCoordinate(edges[x])
+            c2 = self.nodeToCoordinate(edges[x-1])
+            # plt.plot(c1.x,c1.y,'o')
+            x = [c1.x, c2.x]
+            y = [c1.y, c2.y]
+            plt.plot(x, y, "red", linewidth=3.0)
+        plt.show()
+
     def findWay(self, s, e):
         '''
         Ein Pfad wird durch Tiefensuche(DepthFirstPath) zwischen zwei Knoten gesucht
@@ -101,7 +114,8 @@ class Labyrinth(object):
         if not self.graph.validNode(s) or not self.graph.validNode(e):
             return
         path = DepthFirstPath(self.graph, s)
-        path.path(self.graph)
+        path.path(self.graph, s)
+        self.printPath(path,e)
         return path.pathTo(e)
 
     def nodeToCoordinate(self, n):
@@ -111,11 +125,11 @@ class Labyrinth(object):
         :return: Coordinate
         '''
         if n == 0:
-            c = Coordinate(0, self.N-1)
+            c = Coordinate(0, self.N - 1)
             return c
 
         x = n % self.N
-        y = self.N-1-int(n/self.N)
+        y = self.N - 1 - int(n / self.N)
         c = Coordinate(x, y)
         return c
 
@@ -130,19 +144,19 @@ class Labyrinth(object):
             for v in self.graph.getAdj(n):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
-                #plt.plot(c1.x,c1.y,'o')
+                # plt.plot(c1.x,c1.y,'o')
                 x = [c1.x, c2.x]
                 y = [c1.y, c2.y]
-                plt.plot(x,y)
+                plt.plot(x, y, "black", linewidth=3.0)
 
         plt.show()
 
     def labToTxt(self):
-        a = [[0 for i in range(self.N*2-1)]for x in range(self.N*2-1)]
+        a = [[0 for i in range(self.N * 2 - 1)] for x in range(self.N * 2 - 1)]
         y = 0
         for n in range(self.graph.getNodes()):
             c = self.nodeToCoordinate(n)
-            x = c.X()*2
+            x = c.X() * 2
             a[y][x] = 1
             for v in self.graph.getAdj(n):
                 i = v - n
@@ -156,9 +170,9 @@ class Labyrinth(object):
                     a[y - 1][x] = 1
             if c.X() == self.N - 1:
                 y += 2
-        #pprint(a)
-        #b = np.array(a)
-        #np.savetxt('Lab.txt', b)
+        # pprint(a)
+        # b = np.array(a)
+        # np.savetxt('Lab.txt', b)
         with open('Lab.txt', 'w') as file:
             for row in a:
                 file.write(' '.join([str(c) for c in row]) + '\n')
