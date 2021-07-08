@@ -99,8 +99,8 @@ class Labyrinth(object):
             c1 = self.nodeToCoordinate(edges[x])
             c2 = self.nodeToCoordinate(edges[x-1])
             # plt.plot(c1.x,c1.y,'o')
-            x = [c1.x, c2.x]
-            y = [c1.y, c2.y]
+            x = [c1.X(), c2.X()]
+            y = [c1.Y(), c2.Y()]
             plt.plot(x, y, "red", linewidth=3.0)
         plt.show()
 
@@ -145,8 +145,8 @@ class Labyrinth(object):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
                 # plt.plot(c1.x,c1.y,'o')
-                x = [c1.x, c2.x]
-                y = [c1.y, c2.y]
+                x = [c1.X(), c2.X()]
+                y = [c1.Y(), c2.Y()]
                 plt.plot(x, y, "black", linewidth=3.0)
 
         plt.show()

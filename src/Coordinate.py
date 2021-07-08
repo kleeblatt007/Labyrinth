@@ -2,9 +2,10 @@ class Coordinate(object):
     '''
     speichert X- und Y-Wert
     '''
-    def __init__(self, x, y):
+    def __init__(self, x, y, z = 0):
         self.x = x
         self.y = y
+        self.z = z
 
     def X(self):
         '''
@@ -19,3 +20,11 @@ class Coordinate(object):
         :return: int
         '''
         return self.y
+
+    def Z(self):
+        return self.z
+
+    def setCoordinates(self, x, y, z = 0):
+        self.x = x
+        self.y = y
+        self.z = z
