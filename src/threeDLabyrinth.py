@@ -224,7 +224,6 @@ class threeDLabyrinth(object):
             for v in self.graph.getAdj(n):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
-                # plt.plot(c1.x,c1.y,'o')
                 x = [c1.X(), c2.X()]
                 y = [c1.Y(), c2.Y()]
                 z = [c1.Z(), c2.Z()]
@@ -264,10 +263,10 @@ class threeDLabyrinth(object):
             c = Coordinate(0, self.N - 1, 0)
             return c
 
-        x = n % self.N
-        y = self.N - 1 - int(n / self.N)
-        z = math.floor(n/self.N)%self.N
-        c = Coordinate(x, y, z)
+        #x = n % self.N
+        #y = self.N - 1 - int(n / self.N)
+        #z = math.floor(n/self.N)%self.N
+        #c = Coordinate(x, y, z)
         return self.coordinates[n]
 
     def printLab(self):
@@ -284,7 +283,7 @@ class threeDLabyrinth(object):
             for v in self.graph.getAdj(n):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
-                # plt.plot(c1.x,c1.y,'o')
+                ax.plot(c1.X(),c1.Y(), c1.Z(),'o')
                 x = [c1.X(), c2.X()]
                 y = [c1.Y(), c2.Y()]
                 z = [c1.Z(), c2.Z()]

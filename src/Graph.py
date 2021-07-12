@@ -62,14 +62,13 @@ class Graph(object):
         :param n: int
         :return: Coordinate
         '''
-        N = math.sqrt(self.nodes)
         if n == 0:
-            c = Coordinate(0, N-1)
+            c = Coordinate(0, math.sqrt(self.nodes) - 1)
             return c
 
-        x = n % N
-        y = N-1-int(n/N)
-        c = Coordinate(int(x), int(y))
+        x = n % math.sqrt(self.nodes)
+        y = math.sqrt(self.nodes) - 1 - int(n / math.sqrt(self.nodes))
+        c = Coordinate(x, y)
         return c
 
     def printGraph(self):
@@ -82,8 +81,8 @@ class Graph(object):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
                 plt.plot(c1.x,c1.y,'o')
-                x = [c1.x, c2.x]
-                y = [c1.y, c2.y]
-                plt.plot(x,y)
+                x = [c1.X(), c2.X()]
+                y = [c1.Y(), c2.Y()]
+                plt.plot(x, y, "black")
 
         plt.show()

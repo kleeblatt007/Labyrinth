@@ -63,6 +63,7 @@ class Labyrinth(object):
                         m.addEdge(s, s + self.N)
                         m.addEdge(s, s - self.N)
                 s += 1
+        m.printGraph()
         return m
 
     def build(self):
@@ -95,6 +96,14 @@ class Labyrinth(object):
 
     def printPath(self, path,e):
         edges = path.pathTo(e)
+        for n in range(self.graph.getNodes()):
+            for v in self.graph.getAdj(n):
+                c1 = self.nodeToCoordinate(n)
+                c2 = self.nodeToCoordinate(v)
+                plt.plot(c1.x,c1.y,'o')
+                x = [c1.X(), c2.X()]
+                y = [c1.Y(), c2.Y()]
+                plt.plot(x, y, "black", linewidth=3.0)
         for x in range(len(edges)-1,1,-1):
             c1 = self.nodeToCoordinate(edges[x])
             c2 = self.nodeToCoordinate(edges[x-1])
@@ -144,7 +153,7 @@ class Labyrinth(object):
             for v in self.graph.getAdj(n):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
-                # plt.plot(c1.x,c1.y,'o')
+                plt.plot(c1.x,c1.y,'o')
                 x = [c1.X(), c2.X()]
                 y = [c1.Y(), c2.Y()]
                 plt.plot(x, y, "black", linewidth=3.0)
