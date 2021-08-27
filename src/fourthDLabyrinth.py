@@ -681,25 +681,27 @@ class fourthDLabyrinth(object):
     def printLab(self):
         # x = 0
         # y = self.N-1
-        fig = plt.figure()
-        ax = fig.add_subplot(projection='3d')
+        for i in range(self.N):
+            fig = plt.figure()
+            ax = fig.add_subplot(projection='3d')
 
-        for n in range(self.graph.getNodes()):
-            # xArray = []
-            # yArray = []
-            # xArray.append(x)
-            # yArray.append(y)
-            for v in self.graph.getAdj(n):
-                c1 = self.nodeToCoordinate(n)
-                c2 = self.nodeToCoordinate(v)
-                ax.plot(c1.X(),c1.Y(), c1.Z(),'o')
-                x = [c1.X(), c2.X()]
-                y = [c1.Y(), c2.Y()]
-                z = [c1.Z(), c2.Z()]
-                w = [c1.W(), c2.W()]
-                ax.plot(x, y, z, w, "black", linewidth=3.0)
+            for n in range(self.graph.getNodes()):
+                # xArray = []
+                # yArray = []
+                # xArray.append(x)
+                # yArray.append(y)
+                for v in self.graph.getAdj(n):
+                    c1 = self.nodeToCoordinate(n)
+                    c2 = self.nodeToCoordinate(v)
+                    if c1.W() == i and c2.W() == i:
+                        ax.plot(c1.X(),c1.Y(), c1.Z(),'o')
+                        x = [c1.X(), c2.X()]
+                        y = [c1.Y(), c2.Y()]
+                        z = [c1.Z(), c2.Z()]
+                        #w = [c1.W(), c2.W()]
+                        ax.plot(x, y, z, "black", linewidth=3.0)
 
-        plt.show()
+            plt.show()
 
     def labToTxt(self):
         a = [[0 for i in range(self.N * 2 - 1)] for x in range(self.N * 2 - 1)]
