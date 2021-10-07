@@ -3,6 +3,9 @@ from RandomPath import RandomPath
 from DepthFirstPath import DepthFirstPath
 from Coordinate import Coordinate
 import matplotlib.pyplot as plt
+import plotly.express as px
+import plotly.graph_objects as go
+import pandas as pd
 
 
 # from pprint import pprint
@@ -63,7 +66,7 @@ class Labyrinth(object):
                         m.addEdge(s, s + self.N)
                         m.addEdge(s, s - self.N)
                 s += 1
-        m.printGraph()
+        #m.printGraph()
         return m
 
     def build(self):
@@ -95,6 +98,11 @@ class Labyrinth(object):
         return False
 
     def printPath(self, path,e):
+        '''
+        Stellt ein Graphen mit path, mit Hilfe von plt.plot, graphisch dar
+        :param path: vorher erstellter path
+        :param e: Endknoten
+        '''
         edges = path.pathTo(e)
         for n in range(self.graph.getNodes()):
             for v in self.graph.getAdj(n):
@@ -143,6 +151,9 @@ class Labyrinth(object):
         return c
 
     def printLab(self):
+        '''
+        Stellt das Labyrint mit Hilfe von plt.plot graphisch dar
+        '''
         # x = 0
         # y = self.N-1
         for n in range(self.graph.getNodes()):
@@ -160,12 +171,40 @@ class Labyrinth(object):
 
         plt.show()
 
-    def labToTxt(self):
-        a = [[0 for i in range(self.N * 2 - 1)] for x in range(self.N * 2 - 1)]
-        y = 0
+    def printLabPlotly(self):
+        fig = go.Figure()
+
+        for n in range(self.graph.getNodes()):
+            nX = self.nodeToCoordinate(n).x
+            nY = self.nodeToCoordinate(n).y
+            for v in self.graph.getAdj(n):
+                xList = []
+                yList = []
+                xList.append(nX)
+                xList.append(self.nodeToCoordinate(v).x)
+                yList.append(nY)
+                yList.append(self.nodeToCoordinate(v).y)
+
+                df = pd.DataFrame(dict(
+                    x=xList,
+                    y=yList
+                ))
+                fig.add_trace(go.Scatter(x=xList, y=yList, mode="lines"))
+        fig.show()
+
+    def labToTxt(self, end):
+        '''
+        Erstellt aus dem Labyrinth eine Abbildung auf ein zweidimensionales Array
+        und erstellt eine txt Datei. 1 = freier Weg, 0 = Wand, 2 = Ziel
+        :param end: Ziel-Knoten
+        '''
+        a = [[0 for i in range(self.N * 2 +1)] for x in range(self.N * 2 + 1)]
+        y = 1
         for n in range(self.graph.getNodes()):
             c = self.nodeToCoordinate(n)
             x = c.X() * 2
+            if x == 0:
+                x = 1
             a[y][x] = 1
             for v in self.graph.getAdj(n):
                 i = v - n
@@ -179,6 +218,7 @@ class Labyrinth(object):
                     a[y - 1][x] = 1
             if c.X() == self.N - 1:
                 y += 2
+            a[end[0]][end[1]] = 2
         # pprint(a)
         # b = np.array(a)
         # np.savetxt('Lab.txt', b)
