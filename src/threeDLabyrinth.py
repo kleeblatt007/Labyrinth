@@ -276,11 +276,8 @@ class threeDLabyrinth(object):
     def printLab(self):
         # x = 0
         # y = self.N-1
-        #fig = plt.figure()
-        #ax = fig.add_subplot(projection='3d')
-
-        #df = px.data.iris()
-        #fig2 = px.scatter_3d(df, x='x', y='y', z='z')
+        fig = plt.figure()
+        ax = fig.add_subplot(projection='3d')
 
         for n in range(self.graph.getNodes()):
             # xArray = []
@@ -290,18 +287,15 @@ class threeDLabyrinth(object):
             for v in self.graph.getAdj(n):
                 c1 = self.nodeToCoordinate(n)
                 c2 = self.nodeToCoordinate(v)
-                plt.plot(c1.X(),c1.Y(), c1.Z(),'o')
+                #ax.plot(c1.X(), c1.Y(), c1.Z(),'o', color='black')
                 x = [c1.X(), c2.X()]
                 y = [c1.Y(), c2.Y()]
                 z = [c1.Z(), c2.Z()]
-                plt.plot(x, y, z, "black", linewidth=3.0)
-
-                #fig2 = go.Figure(data=[go.Scatter3d(x=x, y=y, z=z,
-                 #                                   mode='markers')])
+                ax.plot(x, y, z, "black", linewidth=3.0)
 
         plt.show()
 
-        #fig2.show()
+
 
     def labToTxt(self):
         a = [[0 for i in range(self.N * 2 - 1)] for x in range(self.N * 2 - 1)]
